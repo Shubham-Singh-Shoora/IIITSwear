@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --primary-color:#552356;
+    --secondary-color:#da2b60;
+    --third-color:#ff9b9b;
+    --fourth-color:#fad8d8;
+    --fifth-color:#fff;
+    --sixth-color:black;
+  }
+  .dark-theme{
+    --primary-color:#111827;
+    --fifth-color:#1f2937; 
+    --sixth-color:white; 
+    --fourth-color:#111827;
+  }
+  body{
+    background-color: var(--fifth-color);
+  }
+/*---------------------------------------CSS FOR navbar-------------------------------------*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 10px black;
+    z-index: 999;
+  }
+  .searchbar {
+    margin: 10px 10px;
+    display: flex;
+  }
+
+  .search-input{
+    min-width: 300px;
+    height: 40px;
+    font-size: 1rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .search-icon {
+    width: 45px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: var(--secondary-color);
+  }
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width:40%;
+    z-index: 999;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 5px var(--primary-color);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #Onmobile a{
+    height: 100%;
+    margin: 10px 10px;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+  }
+  
+  #Onmobile a:hover{
+    background-color: var(--primary-color);
+    color: var(--third-color);
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  
+  .sidebar a{
+    width: 100%;
+  }
+  .Navlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .Navlist li {
+    margin-right: 15px;
+    font-size: 18px;
+    padding: 0.5rem;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .Navlist a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  .Navlist a:hover {
+    color: var(--third-color);
+  }
+  .Navlist{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  .Cart {
+    background: none;
+    border: none;
+  }
+  .ShopCart:hover {
+    background-color: var(--primary-color);
+  }
+  #Login {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  #Login:hover {
+    background-color: var(--third-color);
+  }
+  
+  #Login:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  .Night-form {
+    background: none;
+    border: none;
+  }
+
+  /*------------------------------ CSS for Slideshow --------------------------*/
+
+  .slideshow-container {
+    /* max-width: 1000px; */
+    width:100%;
+    height:50%;
+    position: absolute;
+    top:200px;
+    z-index: -1;
+  }
+  .mySlides{
+    z-index: -5;
+  }
+  /* Next & previous buttons */
+  #prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1000;
+  }
+  
+  /* Position the "next button" to the right */
+  #next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  #prev:hover, #next:hover {
+    background-color: rgba(0,0,0,0.8);
+  } 
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-right:  2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition:  0.6s ease;
+    z-index: 999;
+  }
+  .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+/*--------------------------------------------------- Image Gallery -------------------------------------------*/
+#Collection{
+  color:var(--sixth-color);
+  text-align: center;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+.container{
+  position: relative;
+  left:100px;
+  right:100px;
+  height: 850px;
+  width: 1300px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: minmax(350px,auto);
+  /* background-color: blueviolet; */
+  gap: 15px;
+}
+.box{
+  display :grid;
+  place-content: center;
+
+}
+
+/*---------------------------------------------------------- Footer Section -----------------------------------*/
+#Computer-Footer{
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:280px;
+  margin-top: 40px;
+  background-color: var(--fourth-color);
+}
+.Footer-container{
+  margin: 0px 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 20px;
+  color:var(--sixth-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+h2{
+  margin-bottom: 10px;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.Copyright{
+  color:var(--sixth-color);
+  position: relative;
+  padding-left: 10px;
+}
+
+/********************************************** Media Querie-1 ***************************/
+
+@media only screen and (max-width: 500px)
+{
+  /*---------------------------------------CSS FOR navbar-------------------------------------*/
+  .navbar{
+    flex-direction: column;
+  }
+  #menu {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+  }
+  .navbar_down {
+    position: fixed;
+    bottom: 0px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+    height:40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fifth-color);
+  }
+
+  .Backnone {
+    background: none;
+    border: none;
+  }
+  .Hide-navlist{
+    display: none;
+  }
+  .dot{
+    margin-top: 600px;
+  }
+  .container{
+  position: relative;
+  left:30px;
+  right:0px;
+  height: 650px;
+  width: 350px;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-rows: minmax(100px,auto);
+  
+  }
+  @media only screen and (width<= 463px){
+    .container{
+      grid-template-columns: repeat(1,1fr);
+      height: 1300px;
+      width: 18rem;
+      row-gap: 30px;
+      justify-items: center;
+    }
+  }
+  .box{
+    height:200px;
+    width: 200px;
+  }
+  .box img{
+    width:205px;
+    height:205px;
+  }
+  #Computer-Footer{
+  position:relative;
+  bottom:0;
+  width:100%;
+  height: 730px;
+  }
+  .footLogo{
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic  ;
+  }
+  .Footer-container{
+    flex-direction: column;
+  }
+  .Footer-container li{
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+  }
+  .Copyright{
+    position: relative;
+    bottom:40px;
+  }
+  #hideimage2{
+    display:none;
+  }
+}
+
+/********************************************** Media Querie-2 ***************************/
+
+@media screen and (500px< width <= 770px){
+
+  /*---------------------------------------CSS FOR navbar-------------------------------------*/
+  .navbar{
+    flex-direction: column;
+  }
+  .search-input {
+    min-width:450px;
+  }
+  #menu {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+  }
+  .navbar_down {
+    position: fixed;
+    bottom: 0px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+    height:40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fifth-color);
+  }
+  .Backnone {
+    background: none;
+    border: none;
+  }
+  .Hide-navlist{
+    display: none;
+  }
+  .dot{
+    margin-top: 850px;
+  }
+  .container{
+    position: relative;
+    left:3rem;
+    height: 100%;
+    width: 50%;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    
+    }
+    @media only screen and (width<= 674px){
+      .container{
+        grid-template-columns: repeat(1,1fr);
+        height: 1800px;
+        width: 25rem;
+        row-gap: 30px;
+        justify-items: center;
+      }
+    }
+  .box{
+      height:300px;
+      width: 300px;
+    }
+   .box img{
+      width:290px;
+      height:290px;
+    }
+    #Computer-Footer{
+      position:relative;
+      bottom:0;
+      width:100%;
+      height: 720px;
+      }
+      .footLogo{
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: italic  ;
+      }
+      .Footer-container{
+        flex-direction: column;
+      }
+      .Footer-container li{
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+      }
+      .Copyright{
+        position: relative;
+        bottom:30px;
+      }
+      #hideimage2{
+        display:none
+      }
+  }
+
+/********************************************** Media Querie-3 ***************************/
+@media screen and (770px< width <= 1030px){
+  .navbar{
+    flex-direction: column;
+  }
+  .search-input {
+    min-width:650px;
+  }
+  #menu {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+  }
+  .navbar_down {
+    position: fixed;
+    bottom: 0px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+    height:40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fifth-color);
+  }   
+  .Backnone {
+    background: none;
+    border: none;
+  }
+  #menu{
+    display:none;
+  }
+  .Hide-sidebar{
+    display:none;
+  }
+  #hideimage{
+    display:none;
+  }
+  .mySlides{
+    margin-top: 50px;
+    width:100%;
+    height:100%;
+    background-image: url(4.webp);
+    background-size: cover;
+  }
+  .dot{
+    margin-top: 570px;
+  }
+  .container{
+    /* position: relative; */
+    left: 6rem;
+    height: 100%;
+    width:0%;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px,auto);
+  }
+  .box{
+    height:200px;
+    width: 200px;
+  }
+ .box img{
+    width:205px;
+    height:205px;
+  }
+  .hidefooter{
+    display:none;
+  }
+  #hideimage1{
+    display:none;
+  }
+  .Footer-container, .navbar{
+    width: 100%;
+  }
+}
+
+/********************************************** Media Querie-4 ***************************/
+@media screen and (1030px< width <= 1500px){
+  .Logo img{
+    width:100%;
+    height:100%;
+  }
+  .Navlist li{
+    padding: 0rem;
+  }
+  #menu{
+    display:none;
+  }
+  .Hide-sidebar{
+    display:none;
+  }
+  .slideshow-container{
+    position: absolute;
+    top: 150px;
+  }
+  .mySlides{
+    width:100%;
+    height:140%;
+    background-image: url(4.webp);
+    background-size: cover;
+  }
+  .dot{
+    margin-top: 590px;
+  }
+  .container{
+    position: relative;
+    left:10%;
+    height: 100%;
+    width: 80%;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px,auto);
+  }
+  .box{
+    height:315px;
+    width: 315px;
+  }
+ .box img{
+    width:305px;
+    height:305px;
+  }
+  #hideimage{
+    display:none;
+  }
+  .hidefooter{
+    display:none;
+  }
+  #Computer-Footer{
+    width:100%;
+  }
+  #hideimage1{
+    display:none;
+  }
+}
+/********************************************** Media Querie-4 ***************************/
+@media screen and (1500px< width <= 2560px){
+  .search-input {
+    min-width:550px;
+  }
+  #menu{
+    display:none;
+  }
+  .slideshow-container{
+    position: absolute;
+    top: 150px;
+  }
+  #hideimage1{
+    display:none;
+  }
+  .dot{
+    margin-top: 690px;
+  }
+  .container{
+    position: relative;
+    left: 17rem;
+    height: 100%;
+    width:50rem;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px,auto);
+  }
+  .box{
+    height:315px;
+    width: 315px;
+  }
+ .box img{
+    width:305px;
+    height:305px;
+  }
+  .hidefooter{
+    display:none;
+  }
+}

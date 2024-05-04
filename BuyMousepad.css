@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --primary-color:#552356;
+    --secondary-color:#da2b60;
+    --third-color:#ff9b9b;
+    --fourth-color:#fad8d8;
+    --fifth-color:#fff;
+    --sixth-color:black;
+  }
+  .dark-theme{
+    --primary-color:#111827;
+    --fifth-color:#1f2937; 
+    --sixth-color:white; 
+    --fourth-color:#111827;
+  }
+  body{
+    background-color: var(--fifth-color);
+  }
+/*---------------------------------------CSS FOR navbar-------------------------------------*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0px 10px 10px black;
+    z-index: 999;
+  }
+  .searchbar {
+    margin: 10px 10px;
+    display: flex;
+  }
+
+  .search-input{
+    min-width: 300px;
+    height: 40px;
+    font-size: 1rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .search-icon {
+    width: 45px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: var(--secondary-color);
+  }
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width:40%;
+    z-index: 999;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 5px var(--primary-color);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #Onmobile a{
+    height: 100%;
+    margin: 10px 10px;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+  }
+  
+  #Onmobile a:hover{
+    background-color: var(--primary-color);
+    color: var(--third-color);
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  
+  .sidebar a{
+    width: 100%;
+  }
+  .Navlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .Navlist li {
+    margin-right: 15px;
+    font-size: 18px;
+    padding: 0.5rem;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .Navlist a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  .Navlist a:hover {
+    color: var(--third-color);
+  }
+  .Navlist{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  .Cart {
+    background: none;
+    border: none;
+  }
+  .ShopCart:hover {
+    background-color: var(--primary-color);
+  }
+  #Login {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  #Login:hover {
+    background-color: var(--third-color);
+  }
+  
+  #Login:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  .Night-form {
+    background: none;
+    border: none;
+  }
+
+/*---------------------------------------------------------- Main Body page -----------------------------------*/
+.Showcase-Mugs{
+  margin-bottom: 15rem;
+}
+#Mug-Collection{
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color:var(--sixth-color)
+}
+#Descyption{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  color:var(--sixth-color);
+}
+.Tshirt-Gallery{
+  display: flex;
+  flex-direction: column;
+}
+.Card{
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 10px 5px #a4a2a2;
+  margin-bottom: 3rem;
+}
+.Content{
+  display: flex;
+  flex-direction: column;
+  color:var(--sixth-color);   
+}
+/*---------------------------------------------------------- Footer Section -----------------------------------*/
+#Computer-Footer{
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:280px;
+  margin-top: 40px;
+  background-color: var(--fourth-color);
+}
+.Footer-container{
+  margin: 0px 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 20px;
+  color:var(--sixth-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+h2{
+  margin-bottom: 10px;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.Copyright{
+  color:var(--sixth-color);
+  position: relative;
+  padding-left: 10px;
+}
+
+ @media only screen and (max-width: 1100px)
+{
+  /*---------------------------------------CSS FOR navbar-------------------------------------*/
+  .navbar{
+    flex-direction: column;
+  }
+  #menu {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+  }
+  @media only screen and (width<=360px){
+    .search-input{
+      min-width: 200px;
+    }
+    .Hide-navlist{
+      display: none;
+    }
+    .Showcase-Mugs{
+      width:50%;
+      position:relative;
+      top:12rem;
+      left:6rem;
+      
+    }
+    .Card{
+      width:13rem;
+      height:20rem;
+    }
+    .Card img{
+      width:12rem;
+      height:14rem;
+    }
+    .Content{
+      width:13rem;
+      height:5rem;
+    }
+    #Computer-Footer{
+      position:relative;
+      bottom:0;
+      width:100%;
+      height: 730px;
+      }
+      .footLogo{
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: italic  ;
+      }
+      .Footer-container{
+        flex-direction: column;
+      }
+      .Footer-container li{
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+      }
+      .Copyright{
+        position: relative;
+        bottom:40px;
+      }
+      #hideimage2{
+        display:none;
+      }
+    
+  }
+  @media only screen and (360px < width < 600px){
+    .Hide-navlist{
+      display: none;
+    }
+    .Showcase-Mugs{
+      width:70%;
+      position:relative;
+      top:12rem;
+      left:20%;
+    }
+    #Computer-Footer{
+      position:relative;
+      bottom:0;
+      width:100%;
+      height: 730px;
+      }
+      .footLogo{
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: italic  ;
+      }
+      .Footer-container{
+        flex-direction: column;
+      }
+      .Footer-container li{
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+      }
+      .Copyright{
+        position: relative;
+        bottom:40px;
+      }
+      #hideimage2{
+        display:none;
+      }
+  }
+  @media only screen and (width>=600px){
+    .search-input{
+      min-width: 550px;
+    }
+    .Showcase-Mugs{
+      width:70%;
+      position:relative;
+      top:16rem;
+      left:20%;
+    }
+    .Tshirt-Gallery{
+      width:30rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .Card{
+      width:13rem;
+      height:20rem;
+    }
+    .Card img{
+      width:12rem;
+      height:14rem;
+    }
+    .Content{
+      width:13rem;
+      height:5rem;
+    }
+  }
+  @media only screen and (width>=800px){
+    .Tshirt-Gallery{
+      width:40rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  .navbar_down {
+    position: fixed;
+    bottom: 0px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+    height:40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fifth-color);
+  }
+
+  .Backnone {
+    background: none;
+    border: none;
+  }
+  
+  }
+@media only screen and (width >1100px){
+  .Logo img{
+    width:100%;
+    height:100%;
+  }
+  .search-input {
+    width:20em;
+  }
+  .Hide-menu{
+     display: none;
+  }
+  .Navlist li{
+    padding: 0rem;
+  }
+  @media only screen and (1100px <= width < 1300px ){
+    .Showcase-Mugs{
+      width:70%;
+      position:relative;
+      top:8rem;
+      left:20%;
+    }
+    .Tshirt-Gallery{
+      width:60rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .Card{
+      width:16rem;
+      height:25rem;
+      box-shadow: -10px 10px 5px #a4a2a2;
+      margin-right: 1rem;
+    }
+    .Card img{
+      width:15rem;
+      height:18rem;
+    }
+    .Content{
+      width:16rem;
+      height:5rem;
+    }
+  }
+  @media only screen and (width >=1300px){
+    .search-input {
+      width:30em;
+    }
+    .Navlist li{
+      margin-right: 15px;
+      padding: 0.5rem;
+    }
+    .Showcase-Mugs{
+      width:70%;
+      position:relative;
+      top:8rem;
+      left:20%;
+    }
+    .Tshirt-Gallery{
+      width:60rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .Card{
+      width:15rem;
+      height:25rem;
+      margin-right: 1rem;
+    }
+    .Card img{
+      width:15rem;
+      height:20rem;
+    }
+    .Content{
+      width:15rem;
+      height:5rem;
+    }
+  }
+  .hidefooter{
+    display: none;
+  }
+}
+
+

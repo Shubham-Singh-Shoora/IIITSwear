@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyMugs at IIITSwear.com</title>
+    <link rel="icon" href="ImagesProject/Tab_Icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="BuyMugs.css">
+</head>
+<body>
+    <header>
+        <!--------------------------------------- Logo for Navbar-------------------------------------------------------------------------->
+                <div class="navbar">
+                     <div class="Logo"><img src="ImagesProject/Logo.png" alt="logo" width="300px" height="100px"> </div>
+                     <span onclick= showSidebar() id="menu" class="Hide-menu"><i class="fa-solid fa-bars fa-xl" style="color: #da2b60"></i></span>
+                     <div class="searchbar">
+                        <input placeholder="Search IIITS goodies" class="search-input" id="search-input"/><span class="search-icon"><i
+                                class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff"></i></span>
+                     </div>
+        
+        <!---------------------------- Sidebar on Mobile ------------------------------------ -------------------->
+        
+                     <nav id="Onmobile">
+                        <ul class="sidebar Hide-sidebar">
+                            <li onclick= hideSidebar()>
+                                <a href="#"><i  class="fa-solid fa-xmark fa-xl"
+                                        style="color: #da2b60"></i></a>
+                            </li>
+                            <li><a href="#">Tshirts</a></li>
+                            <li><a href="#">Hoodies</a></li>
+                            <li><a href="#">Caps</a></li>
+                            <li><a href="#">SweatShirts</a></li>
+                        </ul>
+                        </nav>
+        <!----------------------------------- List items on Laptop ----------------------------------------------------------------------->
+        
+                        <div class="Navlist Hide-navlist">
+                            <ul >
+                                <li><a href="#">Tshirt</a></li>
+                                <li><a href="#">Hoodies</a></li>
+                                <li><a href="#">Caps</a></li>
+                                <li><a href="#">SweatShirts</a></li>
+                                <li><a href="#"><button class="Cart" type="button"><i class="fa-solid fa-cart-shopping fa-2xl"
+                                                style="color: #ff9b9b;"></i></button></a></li>
+                                <li><a href="Login Form/LoginForm.html"><button class="Login" id="Login" type="button">Login</button></a></li>
+                                <li><a href="#"><button onclick= DarkMode() class="Night-form"><i class="fa-solid fa-moon fa-2x"
+                                                style="color:#ff9b9b;"></i></button></a></li>
+                            </ul>
+                        </div>
+                </div>
+            </header>
+<main>
+<!-----------------------------------------------Mug Templates--------------------------------------------------------------------------------------->
+<div class="Showcase-Mugs">
+<h2 id="Mug-Collection">Explore Our Mugs Collection</h2>
+<p id="Descyption">Stay hydrated and show off your personality with the wide selection of mugs available at Codeswear.com. 
+     Our mugs are perfect for every interest, including coding mugs for tech enthusiasts, anime mugs, and casual mugs for everyday use. 
+     All of our mugs are made with high-quality materials and are designed to be durable and long-lasting.
+     Shop now and find the perfect mug for you!</p>
+<div class="Tshirt-Gallery">
+<div class="Card" id="Picture1">
+    <img src="ImagesProject/Mug_CodeBlodded.webp">
+    <div class="Content">
+    <span>Programming MUGS</span>
+    <span style ="font-weight:800;font-size: 1.5rem;">CodeBlodded</span>
+    </div>
+</div>
+<div class="Card" id="Picture2">
+        <img src="ImagesProject/Mug_Coder.webp">
+        <div class="Content">
+        <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Programming MUGS</span>
+        <span style ="font-weight:800;font-size: 1.5rem;">Coder</span>
+        </div>
+</div>
+<div class="Card" id="Picture3">
+    <img src="ImagesProject/Mug_Python.webp">
+    <div class="Content">
+    <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Programming  MUGS</span>
+    <span style ="font-weight:800;font-size: 1.5rem;">Python Mug</span>
+    </div>
+</div>
+<div class="Card" id="Picture4">
+    <img src="ImagesProject/Mug_Iloveprogramming.webp">
+    <div class="Content">
+    <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Programming  MUGS</span>
+    <span style ="font-weight:800; font-size: 1.5rem;">I hate programmi... </span>
+    </div>
+</div>   
+<div class="Card" id="Picture5">
+    <img src="ImagesProject/Mug_My codeWorks.webp">
+    <div class="Content">
+    <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Mugs</span>
+    <span style ="font-weight:800;font-size: 1.5rem;"> My COde WorKs I...</span>
+    </div>
+</div>
+<div class="Card" id="Picture6">
+        <img src="ImagesProject/Mug_RealCoder.webp">
+        <div class="Content">
+        <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Mugs</span>
+        <span style ="font-weight:800;font-size: 1.5rem;">If it works....</span>
+        </div>
+</div>
+</div>
+</div>    
+</div>
+
+</main>
+
+<!---************************************************ Footer ****************************************-->
+<footer id="Computer-Footer">
+    <div class="Footer-container Hide-Footer-container">
+        <div class="footLogo">
+           <a class="logo" href="/"> <img src="ImagesProject/Logo.png" alt="hello" width="300px" height="100px" ></a>
+             <br>
+            <p>Wear the code<br>Premium coding tshirts, hoodies and apparals</p>
+        </div>
+        
+        <div class="footShop">
+            <h2><u>Shop</u></h2>
+            <ul>
+                <li>Tshirts</li>
+                <li>SweatShirts</li>
+                <li>Hoodies</li>
+                <li>Caps</li>
+                <li>Mugs</li>
+            </ul>
+        </div>
+        <div class="footService">
+            <h2><u>Customer Service</u></h2>
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li>Return Policy</li>
+            </ul>
+        </div>
+        <div class="Policy">
+            <h2><u>Policy</u></h2>
+            <ul>
+               <li>Privacy Policy</li>
+               <li>Terms and Conditions</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="Copyright Hide-Copyright">
+        <p>&#169;2024 IIITSwear.com &#8212; All Rights Not Reserved</p>
+    </div>
+</footer>
+<footer>
+    <div class="navbar_down hidefooter">
+        <button type="button" class="Backnone">
+            <a href="#"><i class="fa-solid fa-house fa-2x" style="color: #da2b60"></i></a>
+        </button>
+        <button type="button" class="Backnone">
+            <a href="#search-input"><i class="fa-solid fa-magnifying-glass fa-2x" style="color: #da2b60"></i></a>
+        </button>
+        <button type="button"  class="Backnone">
+            <a href="/"><i class="fa-solid fa-cart-shopping fa-2x" style="color: #da2b60"></i></a>
+        </button>
+        <button type="button" onclick= DarkMode() class="Backnone">
+             <i class="fa-solid fa-moon fa-2x" id="icon" style="color: #da2b60"></i>
+        </button>
+        <button type="button" class="Backnone">
+            <a href="Login Form/LoginForm.html"><i class="fa-solid fa-user fa-2x" style="color: #da2b60"></i></a>
+        </button>
+    </div>
+</footer>
+
+<script src="Homescript.js"></script>
+</body>
+</html>
